@@ -10,6 +10,7 @@ export class GuardService {
   isLoggedIn(){
     return !!localStorage.getItem("UserName")
   }
+  
 
 
 }
