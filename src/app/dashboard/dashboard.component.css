@@ -1,0 +1,62 @@
+#nav{
+    height: 800px;
+}
+#links a{
+    text-decoration: none;
+    color: rgb(245, 241, 241);
+    margin: 5px;
+}
+hr{
+    color: rgb(62, 61, 61);
+}
+a div{
+    text-align: center;
+}
+#banner{
+    height: 150px;
+    background-image: url("https://i.postimg.cc/vZH63d5y/banner3.jpg");
+    background-size: cover;
+}
+#banner2{
+    height: 100px;
+    background-image: url("https://i.postimg.cc/vZH63d5y/banner3.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+@media  (max-width: 500px){
+    #nav{
+        height: 350px;
+
+    }
+
+}
+#banner{
+    animation: backInLeft; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; 
+    /* don't forget to set a duration! * */
+}
+#banner2{
+    animation: backInLeft; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; 
+}
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

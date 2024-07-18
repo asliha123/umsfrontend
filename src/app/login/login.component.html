@@ -1,0 +1,38 @@
+
+ <div class="container w-50 bg-dark my-5 p-5">
+    <div class="row mb-3">
+        <div class="col-lg-6">
+            <img  class="w-100 mt-5 py-4 " src="https://i.postimg.cc/kGFwktr7/ums.gif" alt="">
+
+        </div>
+        <div class="col-lg-6 ">
+            <h3 class="mb-5 ">Admin Login</h3> 
+
+
+            <!-- convert modelform to login form --> 
+            <form (ngSubmit)="login()" [formGroup]="loginFormModel" action="">
+                <div class="form-floating mb-4">
+                    <input formControlName="email" type="email" name="e1" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <label  for="floatingInput">Email address</label>
+                  </div>
+                  <!-- error msgs -->
+                   <div *ngIf="loginFormModel.get('email')?.errors&& loginFormModel.get('email')?.touched">
+                    <p class="text-danger">Please enter valid email !</p>
+                  </div>
+                  <div class="form-floating">
+                    <input formControlName="psw" type="password" name="ps1" class="form-control" id="floatingPassword" placeholder="Password">
+                    <label for="floatingPassword">Password</label>
+                  </div> 
+                  <!-- error msgs -->
+                   <div *ngIf="loginFormModel.get('psw')?.errors&& loginFormModel.get('psw')?.touched">
+                    <p class="text-danger">Include characters numbers and space only</p>
+                  </div>
+                  <div class="my-4"> 
+                    <!-- (click)="login()" -->
+                      <button type="submit" class="btn btn-outline-light w-100">login</button>
+                  </div> 
+            </form>
+            
+        </div>
+    </div>
+</div> 

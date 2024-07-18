@@ -1,0 +1,36 @@
+
+<div class="container w-75 my-5">
+    <div class="row border border-dark shadow-lg rounded-4 my-5">
+      <!-- <div class="col-lg-6">
+        <img src="https://i.postimg.cc/FzrD0vZp/users.avif" class="w-100 mt-5" alt="">
+      </div> -->
+      <div class="col-lg-6 rounded-end">
+        <form   (ngSubmit)="updateData()" class="p-5">
+          <h4 class="text-dark text-center my-5">Edit User</h4>
+          <div class="form-floating mb-3">
+            <input [(ngModel)]="userData.name" name="userName"  type="text" class="form-control border border-dark" id="name"  placeholder="Name">
+            <label for="name">Name</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input [(ngModel)]="userData.email"  name="email" type="email" class="form-control border border-dark" id="email"  placeholder="name@example.com">
+            <label for="email">Email address</label>
+          </div>
+          <div class="form-floating">
+            <select [(ngModel)]="userData.status"  name="status" class="form-select border border-dark p-2 rounded" id="status">
+              <option selected hidden disabled value="">Select status</option>
+              <option value="1">Active</option>
+              <option value="0">Inactive</option>
+            </select>
+            <!-- <label for="status">Status</label> -->
+          </div>
+          <div>
+            <button  type="submit" class="btn border btn-outline-dark border-dark w-100 my-5">Update</button>
+          </div>
+        </form>
+      </div>
+   <div class="col-lg-6">
+        <img src="https://i.postimg.cc/FzrD0vZp/users.avif" class="w-100 mt-5" alt="">
+      </div>
+    </div>
+  </div>
+  

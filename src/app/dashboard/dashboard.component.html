@@ -1,0 +1,63 @@
+<div class="row">
+    <div *ngIf="menuSlide" class="col-lg-2 bg-dark" id="nav">
+       <div id="links">
+        <hr>
+        <a href="">
+             <div><strong>
+                <i class="fa-solid fa-house"></i>
+                Home
+            </strong></div>
+        </a><hr>
+        <a routerLink="/users">
+        <div><strong><i class="fa-solid fa-users"></i>
+            Users</strong></div>   
+        </a><hr>
+        <a >
+            <div (click)="logout()"><strong><i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </strong></div>
+        </a><hr>
+       </div>
+    </div>
+    <div class="col-lg-7 ps-0 shadow-lg">
+
+           <div id="banner" class="m-3 rounded shadow-lg d-flex align-items-center">
+               
+                <i (click)="menuClick()" class="fa-solid fa-bars fa-2x ms-5 me-5 text-white"></i>
+                <h2 class="text-white">Welcome {{AdminUserName}}</h2>
+               
+           </div>
+           <div class="row m-4">
+            <div class="col-lg-4 p-2 shadow-lg border-rounded">
+                <!-- calender -->
+                <h5 class="ms-4">Calender</h5>
+               <div >
+                <mat-card class="demo-inline-calendar-card w-100">
+                    <mat-calendar [(selected)]="selected"></mat-calendar>
+                  </mat-card>
+               </div>
+                  
+                
+                </div>
+
+                <div class="col-lg-8   shadow-lg border-rounded">
+                    <!-- pychart -->
+                    <!-- <app-chart></app-chart> -->
+                  <app-chart></app-chart>
+                </div>
+
+           </div>
+
+    </div>
+    <div  class="col-lg-3 border rounded shadow-lg p-3">
+<!-- profile edit -->
+   <app-admin-edit [data]="date" (onAdminChange)="updatedAdmin($event)"></app-admin-edit>
+<!-- employees -->
+<div id="banner2" class="m-3 rounded shadow  d-flex align-items-center">
+               
+    <h6 class="text-white  p-2">Total Number Of Users : {{employeeCount}} </h6>
+   
+</div>
+    </div>
+
+</div>

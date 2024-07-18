@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+// import { Chart } from 'angular-highcharts';
 
 @Component({
   selector: 'app-root',
