@@ -60,7 +60,7 @@ export class AdminEditComponent implements OnInit {
 
     // update local storage with new username
     var indexE=result.email.indexOf('@')
-    localStorage.setItem("UserName",result.email.slice(0,indexE));
+    localStorage.setItem("Username",result.email.slice(0,indexE));
 
 
     // 

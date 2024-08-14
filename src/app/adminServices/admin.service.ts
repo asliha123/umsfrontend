@@ -8,7 +8,7 @@ import { Injectable } from '@angular/core';
 })
 export class AdminService {
 
-  base_url='https://localhost:8000'
+  base_url='http://localhost:8000'
 
   constructor(private http:HttpClient) { }
 
